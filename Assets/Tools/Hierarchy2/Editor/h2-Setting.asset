@@ -1,0 +1,596 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0cc16c3067f9b54dac58cb46ce02b82, type: 3}
+  m_Name: h2-Setting
+  m_EditorClassIdentifier: 
+  ParentIndicator:
+    enableIcon: 1
+    enableShortcut: 0
+    shortcuts: []
+    stateTexture:
+      state: 0
+      states:
+      - colors:
+        - {r: 0, g: 0.67058825, b: 0.67058825, a: 1}
+        - {r: 0.88235295, g: 0.88235295, b: 0.88235295, a: 1}
+        mode: 2
+        texture: {fileID: 2800000, guid: 94d48dc289d7d244bb3bcea530f586f2, type: 3}
+    lineOnParent: 0
+  Active:
+    enableIcon: 1
+    enableShortcut: 1
+    shortcuts:
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: toggle
+      key: 118
+      label: Active
+      shift: 0
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 0
+      id: toggle_siblings
+      key: 0
+      label: Active Siblings
+      shift: 0
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 0
+      id: toggle_parent
+      key: 0
+      label: Active Parent
+      shift: 0
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 0
+      id: toggle_children
+      key: 0
+      label: Active Children
+      shift: 0
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: active_prev_sibling
+      key: 44
+      label: Active Prev Sibling
+      shift: 0
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: active_next_sibling
+      key: 46
+      label: Active Next Sibling
+      shift: 0
+    stateTexture:
+      state: 0
+      states:
+      - colors:
+        - {r: 0.7647059, g: 0.7647059, b: 0, a: 1}
+        - {r: 0, g: 0, b: 0, a: 1}
+        mode: 2
+        texture: {fileID: 2800000, guid: 133cbed04788c5f4fb152e629eeb1e4e, type: 3}
+      - colors:
+        - {r: 0.5294118, g: 0.5294118, b: 0.5294118, a: 1}
+        - {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 1}
+        mode: 2
+        texture: {fileID: 2800000, guid: 388899e1694f765428b4fdc3f0505964, type: 3}
+      - colors:
+        - {r: 0.5019608, g: 0.5019608, b: 0, a: 1}
+        - {r: 0.2509804, g: 0.2509804, b: 0.2509804, a: 1}
+        mode: 2
+        texture: {fileID: 2800000, guid: 388899e1694f765428b4fdc3f0505964, type: 3}
+  Combine:
+    enableIcon: 1
+    enableShortcut: 1
+    shortcuts:
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 0
+      id: combine
+      key: 0
+      label: Combine
+      shift: 0
+  Common:
+    enableIcon: 1
+    enableShortcut: 1
+    shortcuts:
+    - alt: 1
+      chain: 0
+      ctrl: 1
+      enable: 1
+      id: toggle_h2_icons
+      key: 104
+      label: Toggle Hierarchy2
+      shift: 1
+    - alt: 1
+      chain: 0
+      ctrl: 1
+      enable: 1
+      id: open_h2_settings
+      key: 111
+      label: Open Settings
+      shift: 1
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: copy_go_name
+      key: 13
+      label: Copy Name
+      shift: 1
+    - alt: 1
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: copy_go_hierarchy_name
+      key: 13
+      label: Copy Hierarchy Name
+      shift: 1
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: camera_lookthrough
+      key: 108
+      label: Look through Camera
+      shift: 1
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: capture_sceneview
+      key: 99
+      label: Capture SceneView
+      shift: 1
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 0
+      id: goto_root
+      key: 0
+      label: Goto Root
+      shift: 0
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: goto_parent
+      key: 91
+      label: Goto Parent
+      shift: 0
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: goto_child
+      key: 93
+      label: Goto Child
+      shift: 0
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: goto_sibling
+      key: 92
+      label: Goto Next Siblings
+      shift: 0
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: select_sibling
+      key: 49
+      label: Select Sibling
+      shift: 1
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: invert_select_sibling
+      key: 50
+      label: Invert Sibling Selection
+      shift: 1
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: select_scene
+      key: 96
+      label: Select Scene
+      shift: 1
+    drawBackground: 1
+    drawSelectionBackground: 1
+    iconOffset: 0
+    iconSpace: 0
+  Component:
+    enableIcon: 0
+    enableShortcut: 1
+    shortcuts:
+    - alt: 1
+      chain: 0
+      ctrl: 1
+      enable: 1
+      id: show_component
+      key: 99
+      label: Show Components
+      shift: 1
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 0
+      id: show_customize
+      key: 0
+      label: Show Customized Icons
+      shift: 0
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: reset_lc_transform
+      key: 116
+      label: Reset Local Transform
+      shift: 1
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: reset_lc_transform
+      key: 112
+      label: Reset Local Position
+      shift: 1
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: reset_lc_transform
+      key: 114
+      label: Reset Local Rotation
+      shift: 1
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: reset_lc_transform
+      key: 115
+      label: Reset Local Scale
+      shift: 1
+    - alt: 1
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: alt_reset_lc_transform
+      key: 116
+      label: Reset Local Transform
+      shift: 1
+    - alt: 1
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: alt_reset_lc_transform
+      key: 112
+      label: Reset Local Position
+      shift: 1
+    showTransform: 0
+  GOIcon:
+    enableIcon: 1
+    enableShortcut: 1
+    shortcuts:
+    - alt: 1
+      chain: 0
+      ctrl: 1
+      enable: 1
+      id: toggle_ico
+      key: 105
+      label: Toggle GameObject icons
+      shift: 1
+  isActive: 1
+  Layer:
+    enableIcon: 0
+    enableShortcut: 1
+    shortcuts:
+    - alt: 1
+      chain: 0
+      ctrl: 1
+      enable: 1
+      id: show_layer
+      key: 108
+      label: Show / Hide Layers
+      shift: 1
+    - alt: 0
+      chain: 49
+      ctrl: 0
+      enable: 0
+      id: apply_layer_children
+      key: 108
+      label: Apply Layer to children
+      shift: 0
+    labelColor:
+      align: 1
+      bgColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+      colors:
+      - {r: 1, g: 0.35000002, b: 0.35000002, a: 1}
+      - {r: 1, g: 0.74, b: 0.35000002, a: 1}
+      - {r: 0.87, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.47999993, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.35000002, g: 1, b: 0.61, a: 1}
+      - {r: 0.35000002, g: 1, b: 1, a: 1}
+      - {r: 0.35000002, g: 0.60999984, b: 1, a: 1}
+      - {r: 0.48000002, g: 0.35000002, b: 1, a: 1}
+      - {r: 0.87, g: 0.35000002, b: 1, a: 1}
+      - {r: 1, g: 0.35000002, b: 0.74, a: 1}
+      - {r: 1, g: 0.35000002, b: 0.35000002, a: 1}
+      - {r: 1, g: 0.74, b: 0.35000002, a: 1}
+      - {r: 0.87, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.47999993, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.35000002, g: 1, b: 0.61, a: 1}
+      - {r: 0.35000002, g: 1, b: 1, a: 1}
+      - {r: 0.35000002, g: 0.60999984, b: 1, a: 1}
+      - {r: 0.48000002, g: 0.35000002, b: 1, a: 1}
+      - {r: 0.87, g: 0.35000002, b: 1, a: 1}
+      - {r: 1, g: 0.35000002, b: 0.74, a: 1}
+      - {r: 1, g: 0.35000002, b: 0.35000002, a: 1}
+      - {r: 1, g: 0.74, b: 0.35000002, a: 1}
+      - {r: 0.87, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.47999993, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.35000002, g: 1, b: 0.61, a: 1}
+      - {r: 0.35000002, g: 1, b: 1, a: 1}
+      - {r: 0.35000002, g: 0.60999984, b: 1, a: 1}
+      - {r: 0.48000002, g: 0.35000002, b: 1, a: 1}
+      - {r: 0.87, g: 0.35000002, b: 1, a: 1}
+      - {r: 1, g: 0.35000002, b: 0.74, a: 1}
+      - {r: 1, g: 0.35000002, b: 0.35000002, a: 1}
+      - {r: 1, g: 0.74, b: 0.35000002, a: 1}
+      lbColor: {r: 0, g: 0, b: 0, a: 1}
+      padding: 0
+      shortenName: 1
+      style: 17
+    showDefaultlayer: 0
+  Lock:
+    enableIcon: 0
+    enableShortcut: 0
+    shortcuts:
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 0
+      id: toggle_lock
+      key: 0
+      label: Toggle lock
+      shift: 0
+    stateTexture:
+      state: 0
+      states:
+      - colors:
+        - {r: 0.7647059, g: 0.7647059, b: 0, a: 1}
+        - {r: 0, g: 0, b: 0, a: 1}
+        mode: 2
+        texture: {fileID: 2800000, guid: dfa0fdf5973b1044fa0df3444d035b68, type: 3}
+      - colors:
+        - {r: 0.5294118, g: 0.5294118, b: 0.5294118, a: 1}
+        - {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 1}
+        mode: 2
+        texture: {fileID: 2800000, guid: b547cb4277a6e624782feac91b649906, type: 3}
+  palette:
+    list:
+    - colors:
+      - {r: 0.21960784, g: 0.21960784, b: 0.21960784, a: 1}
+      - {r: 0.75686276, g: 0.75686276, b: 0.75686276, a: 1}
+      - {r: 0.24313726, g: 0.37254903, b: 0.5882353, a: 1}
+      - {r: 0.25490198, g: 0.49019608, b: 0.90588236, a: 1}
+      - {r: 0.28235295, g: 0.28235295, b: 0.28235295, a: 1}
+      - {r: 0.5568628, g: 0.5568628, b: 0.5568628, a: 1}
+    - colors:
+      - {r: 1, g: 0.35000002, b: 0.35000002, a: 1}
+      - {r: 1, g: 0.74, b: 0.35000002, a: 1}
+      - {r: 0.87, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.47999993, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.35000002, g: 1, b: 0.61, a: 1}
+      - {r: 0.35000002, g: 1, b: 1, a: 1}
+      - {r: 0.35000002, g: 0.60999984, b: 1, a: 1}
+      - {r: 0.48000002, g: 0.35000002, b: 1, a: 1}
+      - {r: 0.87, g: 0.35000002, b: 1, a: 1}
+      - {r: 1, g: 0.35000002, b: 0.74, a: 1}
+    recentIdx: 0
+    recentList: []
+    showPalette: 0
+  Prefab:
+    enableIcon: 1
+    enableShortcut: 1
+    shortcuts:
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: break_prefab
+      key: 98
+      label: Break Prefab
+      shift: 1
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: apply_prefab
+      key: 46
+      label: Apply Prefab
+      shift: 1
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: revert_prefab
+      key: 44
+      label: Revert Prefab
+      shift: 1
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: active_apply_prefab
+      key: 97
+      label: Active & Apply Prefab
+      shift: 1
+    stateTexture:
+      state: 0
+      states:
+      - colors:
+        - {r: 0.5019608, g: 0.76862746, b: 1, a: 1}
+        mode: 1
+        texture: {fileID: 2800000, guid: 258472cda8f511348a5aa71f9a6e0787, type: 3}
+      - colors:
+        - {r: 0.57254905, g: 0.5019608, b: 1, a: 1}
+        mode: 1
+        texture: {fileID: 2800000, guid: 258472cda8f511348a5aa71f9a6e0787, type: 3}
+      - colors:
+        - {r: 0.8392157, g: 0.2784314, b: 0.2784314, a: 1}
+        mode: 1
+        texture: {fileID: 2800000, guid: 258472cda8f511348a5aa71f9a6e0787, type: 3}
+      - colors:
+        - {r: 0.75686276, g: 0.75686276, b: 0.75686276, a: 1}
+        mode: 1
+        texture: {fileID: 2800000, guid: 258472cda8f511348a5aa71f9a6e0787, type: 3}
+  previewAllStates: 0
+  SceneViewHL:
+    enableIcon: 0
+    enableShortcut: 1
+    shortcuts:
+    - alt: 1
+      chain: 0
+      ctrl: 1
+      enable: 1
+      id: enable
+      key: 115
+      label: Toggle SceneView Highlight
+      shift: 1
+    dragColor: {r: 1, g: 1, b: 0, a: 0.75}
+    hoverColor: {r: 0, g: 1, b: 1, a: 0.75}
+  Script:
+    enableIcon: 1
+    enableShortcut: 1
+    shortcuts:
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: find_missing_script
+      key: 109
+      label: Find Missing
+      shift: 1
+    - alt: 1
+      chain: 0
+      ctrl: 0
+      enable: 1
+      id: find_missing_script_in_children
+      key: 109
+      label: Find Missing in Children
+      shift: 1
+    stateTexture:
+      state: 0
+      states: []
+    excludePaths:
+    - Assets/Plugins
+    - Assets/Standard Assets/
+    - Assets/Pro Standard Assets/
+    stateColors:
+    - {r: 0, g: 0.5019608, b: 0, a: 1}
+    - {r: 0.5019608, g: 0, b: 0, a: 1}
+  Static:
+    enableIcon: 1
+    enableShortcut: 1
+    shortcuts:
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 0
+      id: show_static
+      key: 0
+      label: Show / Hide static icon
+      shift: 0
+    - alt: 0
+      chain: 0
+      ctrl: 0
+      enable: 0
+      id: toggle_static
+      key: 0
+      label: Toggle static
+      shift: 0
+    stateTexture:
+      state: 0
+      states:
+      - colors:
+        - {r: 0.7647059, g: 0.7647059, b: 0, a: 1}
+        - {r: 0, g: 0, b: 0, a: 1}
+        mode: 2
+        texture: {fileID: 2800000, guid: be1263a7dfa5f7c4480a428042ed78dd, type: 3}
+      - colors:
+        - {r: 0.5294118, g: 0.5294118, b: 0.5294118, a: 1}
+        - {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 1}
+        mode: 2
+        texture: {fileID: 2800000, guid: be1263a7dfa5f7c4480a428042ed78dd, type: 3}
+  Tag:
+    enableIcon: 1
+    enableShortcut: 1
+    shortcuts:
+    - alt: 1
+      chain: 0
+      ctrl: 1
+      enable: 1
+      id: enable_tag
+      key: 116
+      label: Show Tag in Hierarchy
+      shift: 1
+    labelColor:
+      align: 1
+      bgColor: {r: 0, g: 0.5019608, b: 0.2509804, a: 0.5019608}
+      colors:
+      - {r: 1, g: 0.35000002, b: 0.35000002, a: 1}
+      - {r: 1, g: 0.74, b: 0.35000002, a: 1}
+      - {r: 0.87, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.47999993, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.35000002, g: 1, b: 0.61, a: 1}
+      - {r: 0.35000002, g: 1, b: 1, a: 1}
+      - {r: 0.35000002, g: 0.60999984, b: 1, a: 1}
+      - {r: 0.48000002, g: 0.35000002, b: 1, a: 1}
+      - {r: 0.87, g: 0.35000002, b: 1, a: 1}
+      - {r: 1, g: 0.35000002, b: 0.74, a: 1}
+      - {r: 1, g: 0.35000002, b: 0.35000002, a: 1}
+      - {r: 1, g: 0.74, b: 0.35000002, a: 1}
+      - {r: 0.87, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.47999993, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.35000002, g: 1, b: 0.61, a: 1}
+      - {r: 0.35000002, g: 1, b: 1, a: 1}
+      - {r: 0.35000002, g: 0.60999984, b: 1, a: 1}
+      - {r: 0.48000002, g: 0.35000002, b: 1, a: 1}
+      - {r: 0.87, g: 0.35000002, b: 1, a: 1}
+      - {r: 1, g: 0.35000002, b: 0.74, a: 1}
+      - {r: 1, g: 0.35000002, b: 0.35000002, a: 1}
+      - {r: 1, g: 0.74, b: 0.35000002, a: 1}
+      - {r: 0.87, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.47999993, g: 1, b: 0.35000002, a: 1}
+      - {r: 0.35000002, g: 1, b: 0.61, a: 1}
+      - {r: 0.35000002, g: 1, b: 1, a: 1}
+      - {r: 0.35000002, g: 0.60999984, b: 1, a: 1}
+      - {r: 0.48000002, g: 0.35000002, b: 1, a: 1}
+      - {r: 0.87, g: 0.35000002, b: 1, a: 1}
+      - {r: 1, g: 0.35000002, b: 0.74, a: 1}
+      - {r: 1, g: 0.35000002, b: 0.35000002, a: 1}
+      - {r: 1, g: 0.74, b: 0.35000002, a: 1}
+      lbColor: {r: 0, g: 0, b: 0, a: 1}
+      padding: 0
+      shortenName: 0
+      style: 33
