@@ -5,6 +5,7 @@ namespace Logic
 {
     public class ActorBase : MonoBehaviour
     {
+        public int Serial { get; private set; }
         public Sdb.ActorInfo ActorInfo
         {
             get;
@@ -17,11 +18,11 @@ namespace Logic
             private set;
         }
 
-        public int Serial { get; private set; }
-
+        public MoveController MoveController { get; private set; }
         protected virtual void Awake()
         {
             RigidBody = GetComponentInChildren<Rigidbody2D>();
+            MoveController = new MoveController(this);
         }
 
         public void Init(Sdb.ActorInfo actorInfo)

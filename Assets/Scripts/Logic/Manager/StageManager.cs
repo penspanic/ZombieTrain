@@ -33,6 +33,8 @@ namespace Logic
         {
             Character character = ActorFactory.Instance.Create(SdbInstance<Sdb.ActorInfo>.Get("Character1")) as Character;
             character.transform.position = new Vector3(-5f, -1.37f, 0f);
+
+            InputManager.Instance.SetCharacter(character);
         }
     }
 }
