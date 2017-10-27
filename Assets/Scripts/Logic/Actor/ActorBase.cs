@@ -25,11 +25,28 @@ namespace Logic
             MoveController = new MoveController(this);
         }
 
-        public void Init(Sdb.ActorInfo actorInfo)
+        public virtual void Init(Sdb.ActorInfo actorInfo)
         {
             this.ActorInfo = actorInfo;
 
             this.Serial = ActorContainer.Instance.Add(this);
+        }
+
+        protected virtual void FixedUpdate()
+        {
+            if(Mathf.Abs(RigidBody.velocity.x) < 0.1f)
+            {
+                return;
+            }
+
+            if(RigidBody.velocity.x < 0)
+            {
+                this.transform.rotation = Quaternion.Euler(new Vector3(0f, 180f, 0f));
+            }
+            else
+            {
+                this.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+            }
         }
     }
 }

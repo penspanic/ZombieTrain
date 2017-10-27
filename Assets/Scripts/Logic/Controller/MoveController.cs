@@ -14,11 +14,19 @@ namespace Logic
         public void ProcessJoystick(Vector2 dirVec)
         {
             dirVec.y = 0;
-            _actor.RigidBody.velocity = dirVec * _actor.ActorInfo.MoveSpeed;
+            if(dirVec == Vector2.zero)
+            {
+                return;
+            }
+            Vector2 velocity = _actor.RigidBody.velocity;
+            velocity.x = dirVec.x * _actor.ActorInfo.MoveSpeed;
+
+            _actor.RigidBody.velocity = velocity;
         }
 
         public void ProcessJump()
         {
+            _actor.RigidBody.velocity += Vector2.up * (_actor as Character).CharacterInfo.JumpPower;
         }
     }
 }

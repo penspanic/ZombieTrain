@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: Character1
   JumpCoolTime: 0
-  JumpPower: 0
+  JumpPower: 10
