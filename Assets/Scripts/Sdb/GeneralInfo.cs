@@ -7,5 +7,6 @@ namespace Sdb
     public class GeneralInfo : ScriptableObject
     {
         public int ThrowWeaponDamage;
+        public int HpItemHealValue;
     }
 }

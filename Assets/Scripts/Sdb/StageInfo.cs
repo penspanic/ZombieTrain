@@ -12,6 +12,8 @@ namespace Sdb
     [System.Serializable]
     public class SectorInfo
     {
-        public float Length;
+        public int Length;
+        public int ZombieCount;
+        public int BoxDropPercent;
     }
 }

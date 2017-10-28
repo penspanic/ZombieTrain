@@ -18,10 +18,20 @@ namespace Logic
             private set;
         }
 
+        public Animator Animator { get; private set; }
         public MoveController MoveController { get; private set; }
+
+        public int Hp { get; protected set; }
+
+        #region Events
+
+        public event System.Action OnGroundEnter;
+
+        #endregion
         protected virtual void Awake()
         {
             RigidBody = GetComponentInChildren<Rigidbody2D>();
+            Animator = GetComponent<Animator>();
             MoveController = new MoveController(this);
         }
 
@@ -29,7 +39,12 @@ namespace Logic
         {
             this.ActorInfo = actorInfo;
 
-            this.Serial = ActorContainer.Instance.Add(this);
+            ActorContainer.Instance.Add(this);
+        }
+
+        public void SetSerial(int serial)
+        {
+            this.Serial = serial;
         }
 
         protected virtual void FixedUpdate()
@@ -46,6 +61,23 @@ namespace Logic
             else
             {
                 this.transform.rotation = Quaternion.Euler(new Vector3(0f, 0f, 0f));
+            }
+        }
+
+        protected virtual void OnCollisionEnter2D(Collision2D other)
+        {
+            if(other.gameObject.CompareTag("Ground") == true)
+            {
+                OnGroundEnter?.Invoke();
+            }
+        }
+
+        public void Heal(int healAmount)
+        {
+            this.Hp += healAmount;
+            if(this.Hp > ActorInfo.MaxHp)
+            {
+                this.Hp = ActorInfo.MaxHp;
             }
         }
     }

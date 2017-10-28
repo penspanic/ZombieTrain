@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ground
+  - Actor
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Item
+  - Ground
   - particle
   - 
   - 
@@ -43,6 +45,9 @@ TagManager:
     locked: 0
   - name: Actor
     uniqueID: 1324968579
+    locked: 0
+  - name: Item
+    uniqueID: 2267945885
     locked: 0
   - name: UI
     uniqueID: 1900103267

@@ -35,6 +35,7 @@ namespace Logic
             character.transform.position = new Vector3(-5f, -1.37f, 0f);
 
             InputManager.Instance.SetCharacter(character);
+            CameraManager.Instance.SetCharacter(character);
         }
     }
 }

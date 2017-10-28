@@ -6,9 +6,11 @@ namespace Logic
     public class MoveController
     {
         private ActorBase _actor;
+        public bool IsGrounded { get; private set; }
         public MoveController(ActorBase actor)
         {
             this._actor = actor;
+            this._actor.OnGroundEnter += OnGroundEnter;
         }
 
         public void ProcessJoystick(Vector2 dirVec)
@@ -26,7 +28,18 @@ namespace Logic
 
         public void ProcessJump()
         {
+            if(IsGrounded == false)
+            {
+                return;
+            }
+
+            IsGrounded = false;
             _actor.RigidBody.velocity += Vector2.up * (_actor as Character).CharacterInfo.JumpPower;
+        }
+
+        private void OnGroundEnter()
+        {
+            IsGrounded = true;
         }
     }
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: Character1
   Type: 1
-  MaxHp: 0
+  MaxHp: 5
   MoveSpeed: 5

@@ -7,6 +7,7 @@ namespace Logic
     public class Character : ActorBase
     {
         public Sdb.CharacterInfo CharacterInfo { get; private set; }
+        public WeaponBase Weapon { get; private set; }
         protected override void Awake()
         {
             base.Awake();
@@ -17,6 +18,11 @@ namespace Logic
             base.Init(actorInfo);
 
             CharacterInfo = SdbInstance<Sdb.CharacterInfo>.Get(actorInfo.Id);
+        }
+
+        public void SetWeapon(WeaponBase weapon)
+        {
+            this.Weapon = weapon;
         }
     }
 }

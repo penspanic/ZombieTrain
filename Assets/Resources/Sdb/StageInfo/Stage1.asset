@@ -13,6 +13,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: Stage1
   SectorInfos:
-  - Length: 20
-  - Length: 20
-  - Length: 20
+  - Length: 3
+    ZombieCount: 5
+    BoxDropPercent: 30
+  - Length: 5
+    ZombieCount: 10
+    BoxDropPercent: 20
+  - Length: 7
+    ZombieCount: 30
+    BoxDropPercent: 10

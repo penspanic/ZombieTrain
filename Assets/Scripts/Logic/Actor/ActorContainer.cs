@@ -6,15 +6,20 @@ namespace Logic
 {
     public class ActorContainer : SingletonBehaviour<ActorContainer>
     {
+        public Character LocalCharacter { get; private set; }
+
         private Dictionary<int/*Serial*/, ActorBase> _actors = new Dictionary<int, ActorBase>();
         private SerialIssuer _serialIssuer = new SerialIssuer();
+
+        public event System.Action<ActorBase> OnActorAdded;
+        public event System.Action<ActorBase> OnActorRemoved;
 
         protected override void Awake()
         {
             base.Awake();
         }
 
-        public int Add(ActorBase actor)
+        public void Add(ActorBase actor)
         {
             if(_actors.ContainsKey(actor.Serial) == true)
             {
@@ -22,9 +27,16 @@ namespace Logic
             }
 
             int newSerial = _serialIssuer.Get();
+            actor.SetSerial(newSerial);
+
             _actors.Add(newSerial, actor);
 
-            return newSerial;
+            if(actor is Character)
+            {
+                LocalCharacter = actor as Character;
+            }
+
+            OnActorAdded?.Invoke(actor);
         }
 
         public void Remove(ActorBase actor)
@@ -36,6 +48,7 @@ namespace Logic
             }
 
             _actors.Remove(actor.Serial);
+            OnActorRemoved?.Invoke(actor);
         }
     }
 }

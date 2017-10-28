@@ -35,7 +35,6 @@ namespace Logic
             }
 
             Vector2 dirVec = new Vector2(joystick.HorizontalAxis.Value, joystick.VerticalAxis.Value);
-            Debug.Log(dirVec.ToPreciseString());
             _character.MoveController.ProcessJoystick(dirVec);
 
             if(Input.GetKeyDown(KeyCode.Alpha1) == true)
