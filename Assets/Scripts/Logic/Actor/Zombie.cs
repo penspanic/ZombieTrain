@@ -18,7 +18,7 @@ namespace Logic
             {
                 return;
             }
-            if(base.MoveController.IsGrounded == false)
+            if(base.MoveController.IsGrounded == false || base.IsInvincible == true)
             {
                 return;
             }

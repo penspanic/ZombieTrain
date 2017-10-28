@@ -20,6 +20,11 @@ namespace Logic
             {
                 return;
             }
+            if(_actor.IsInvincible == true)
+            {
+                return;
+            }
+
             Vector2 velocity = _actor.RigidBody.velocity;
             velocity.x = dirVec.x * _actor.ActorInfo.MoveSpeed;
 

@@ -21,8 +21,6 @@ namespace Logic
             base.Awake();
             AttackController = new AttackController(this);
             _weaponParent = transform.FindRecursive("WeaponParent").gameObject;
-
-            base.OnDamaged += OnCharacterDamaged;
         }
 
         public override void Init(ActorInfo actorInfo)
@@ -30,18 +28,6 @@ namespace Logic
             base.Init(actorInfo);
 
             CharacterInfo = SdbInstance<Sdb.CharacterInfo>.Get(actorInfo.Id);
-        }
-
-        private void OnCharacterDamaged()
-        {
-            StartCoroutine(InvincibleProcess());
-        }
-
-        private IEnumerator InvincibleProcess()
-        {
-            IsInvincible = true;
-            yield return new WaitForSeconds(SpecificSdb<Sdb.GeneralInfo>.Get().HitInvincibleTime);
-            IsInvincible = false;
         }
 
         public void SetWeapon(WeaponBase weapon)

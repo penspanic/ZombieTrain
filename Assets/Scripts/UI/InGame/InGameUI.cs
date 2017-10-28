@@ -8,20 +8,11 @@ namespace UI
         [SerializeField]
         private GameObject[] _heartObjects;
 
-        private void Awake()
+        private void Start()
         {
-            Logic.ActorContainer.Instance.OnActorAdded += OnActorAdded;
-        }
 
-        private void OnActorAdded(Logic.ActorBase actor)
-        {
-            if((actor as Logic.Character) == false)
-            {
-                return;
-            }
-
-            actor.OnHpChanged += OnCharacterHpChanged;
-            OnCharacterHpChanged(actor.Hp);
+            Logic.ActorContainer.Instance.LocalCharacter.OnHpChanged += OnCharacterHpChanged;
+            OnCharacterHpChanged(Logic.ActorContainer.Instance.LocalCharacter.Hp);
         }
 
         private void OnCharacterHpChanged(int hp)
@@ -35,6 +26,7 @@ namespace UI
             {
                 _heartObjects[i].SetActive(true);
             }
+            Debug.Log("OnCharacterHpChanged");
         }
     }
 }
