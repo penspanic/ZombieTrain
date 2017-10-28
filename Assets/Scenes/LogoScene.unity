@@ -258,6 +258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _creditObject: {fileID: 397400833}
   _buttonImage: {fileID: 1560627398}
+  _buttonText: {fileID: 502743715}
   _switchDelay: 0.3
   _switchSprite2: {fileID: 21300000, guid: d77e880a046eaf94cb10552d07460536, type: 3}
   _switchSprite3: {fileID: 21300000, guid: ce95886c59a724b498626336e3caf893, type: 3}
