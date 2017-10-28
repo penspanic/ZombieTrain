@@ -22,10 +22,15 @@ namespace Logic
         public MoveController MoveController { get; private set; }
 
         public int Hp { get; protected set; }
-
+        public bool IsInvincible { get; protected set; }
         #region Events
 
         public event System.Action OnGroundEnter;
+        public event System.Action<int> OnHpChanged;
+        public event System.Action OnDamaged;
+
+        public event System.Action OnInvincibleStart;
+        public event System.Action OnInvincibleEnd;
 
         #endregion
         protected virtual void Awake()
@@ -73,8 +78,13 @@ namespace Logic
             }
         }
 
-        public void GiveDamage(int damage)
+        public bool GiveDamage(ActorBase attacker, int damage)
         {
+            if(IsInvincible == true)
+            {
+                return false;
+            }
+
             this.Hp -= damage;
             if(this.Hp <= 0)
             {
@@ -82,6 +92,30 @@ namespace Logic
                 ActorContainer.Instance.Remove(this);
                 Destroy(this.gameObject);
             }
+
+            OnHpChanged?.Invoke(this.Hp);
+            OnDamaged?.Invoke();
+
+            Vector2 attackDirection = this.transform.position - attacker.transform.position;
+            PushByHit(attackDirection.normalized);
+
+            StartCoroutine(InvincibleProcess());
+            return true;
+        }
+
+        private IEnumerator InvincibleProcess()
+        {
+            IsInvincible = true;
+            OnInvincibleStart?.Invoke();
+            yield return new WaitForSeconds(SpecificSdb<Sdb.GeneralInfo>.Get().HitInvincibleTime);
+            IsInvincible = false;
+            OnInvincibleEnd?.Invoke();
+        }
+
+        private void PushByHit(Vector2 direction)
+        {
+            direction += Vector2.up;
+            RigidBody.velocity = direction * 5f;
         }
 
         public void Heal(int healAmount)
@@ -91,6 +125,8 @@ namespace Logic
             {
                 this.Hp = ActorInfo.MaxHp;
             }
+
+            OnHpChanged?.Invoke(this.Hp);
         }
     }
 }

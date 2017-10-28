@@ -8,5 +8,6 @@ namespace Sdb
     {
         public int ThrowWeaponDamage;
         public int HpItemHealValue;
+        public float HitInvincibleTime;
     }
 }

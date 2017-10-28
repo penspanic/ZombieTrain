@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Logic
 {
@@ -35,6 +36,8 @@ namespace Logic
         [SerializeField]
         private GameObject _randomBoxPrefab;
 
+        private List<TransitionZone> transitionZones = new List<TransitionZone>();
+
         protected override void Awake()
         {
             base.Awake();
@@ -43,6 +46,8 @@ namespace Logic
 
         public void CreateSectors()
         {
+            transitionZones.Add(GameObject.FindObjectOfType<TransitionZone>());
+
             float createPositionX = 6.4f;
             for(int i = 0; i < StageManager.Instance.CurrentStageInfo.SectorInfos.Length; ++i)
             {
@@ -55,9 +60,12 @@ namespace Logic
                     createPositionX += 12.8f;
                 }
 
-                GameObject newTransitionZone = Instantiate(_transitionZonePrefab);
+                TransitionZone newTransitionZone = Instantiate(_transitionZonePrefab).GetComponent<TransitionZone>();
                 newTransitionZone.transform.SetParent(_trainParent.transform, false);
                 newTransitionZone.transform.localPosition = new Vector2(createPositionX - 4.8f, 0f);
+
+                transitionZones.Add(newTransitionZone);
+
                 createPositionX += 3.2f;
             }
         }
@@ -65,6 +73,7 @@ namespace Logic
         public void ChangeSector(int sectorIndex)
         {
             CurrentSectorIndex = sectorIndex;
+            transitionZones[sectorIndex].Unlock();
 
             CreateZombies();
         }
@@ -108,6 +117,11 @@ namespace Logic
 
             float randomBoxDropRate = (float)CurrentSectorInfo.BoxDropPercent * 0.01f;
             bool isDropBox = Random.value < randomBoxDropRate;
+
+            if(ActorContainer.Instance.GetZombieCount() == 0)
+            {
+                ChangeSector(++CurrentSectorIndex);
+            }
         }
 
         public void CreateRandomBox(float xPosition, string itemId)

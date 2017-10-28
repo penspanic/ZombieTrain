@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -49,6 +50,13 @@ namespace Logic
 
             _actors.Remove(actor.Serial);
             OnActorRemoved?.Invoke(actor);
+        }
+
+        public int GetZombieCount()
+        {
+            return (from actor in _actors
+                    where actor.Value.ActorInfo.Type == Constants.ActorType.Zombie
+                    select actor.Value).Count();
         }
     }
 }

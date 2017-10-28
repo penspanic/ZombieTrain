@@ -50,18 +50,18 @@ namespace Logic
             }
 
             _hittedSerials.Add(zombie.Serial);
-            zombie.GiveDamage(MeleeWeaponInfo.Damage);
+            zombie.GiveDamage(Owner, MeleeWeaponInfo.Damage);
 
             switch(WeaponInfo.Grade)
             {
                 case Constants.WeaponGrade.Low:
-                    EffectManager.Instance.Show(EffectType.Hit_Low, this.gameObject.transform.position);
+                    EffectManager.Instance.Show(EffectType.Hit_Low, zombie.transform.position);
                     break;
                 case Constants.WeaponGrade.Normal:
-                    EffectManager.Instance.Show(EffectType.Hit_Normal, this.gameObject.transform.position);
+                    EffectManager.Instance.Show(EffectType.Hit_Normal, zombie.transform.position);
                     break;
                 case Constants.WeaponGrade.High:
-                    EffectManager.Instance.Show(EffectType.Hit_High, this.gameObject.transform.position);
+                    EffectManager.Instance.Show(EffectType.Hit_High, zombie.transform.position);
                     break;
                 default:
                     break;

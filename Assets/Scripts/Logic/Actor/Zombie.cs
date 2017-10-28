@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Logic
 {
@@ -17,7 +18,7 @@ namespace Logic
             {
                 return;
             }
-            if(base.MoveController.IsGrounded == false)
+            if(base.MoveController.IsGrounded == false || base.IsInvincible == true)
             {
                 return;
             }
@@ -30,6 +31,30 @@ namespace Logic
             velocity.x = direction.x * ActorInfo.MoveSpeed;
 
             RigidBody.velocity = velocity;
+        }
+
+        protected override void FixedUpdate()
+        {
+            base.FixedUpdate();
+            Animator.SetFloat("Velocity", Mathf.Abs(RigidBody.velocity.x));
+        }
+
+        protected override void OnCollisionEnter2D(Collision2D other)
+        {
+            base.OnCollisionEnter2D(other);
+
+            if(other.gameObject.layer == LayerMask.NameToLayer("Character"))
+            {
+                other.gameObject.GetComponent<Character>().GiveDamage(this, 1);
+            }
+        }
+
+        protected void OnCollisionStay2D(Collision2D other)
+        {
+            if(other.gameObject.layer == LayerMask.NameToLayer("Character"))
+            {
+                other.gameObject.GetComponent<Character>().GiveDamage(this, 1);
+            }
         }
     }
 }

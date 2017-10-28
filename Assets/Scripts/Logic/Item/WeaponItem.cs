@@ -26,6 +26,7 @@ namespace Logic
                     break;
             }
             weapon.Init(weaponInfo);
+            weapon.SetOwner(owner);
             ActorContainer.Instance.LocalCharacter.EquipWeapon(weapon);
         }
     }
