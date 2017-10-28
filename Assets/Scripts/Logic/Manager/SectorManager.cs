@@ -81,15 +81,15 @@ namespace Logic
         private Vector2 GetSectorRange(int index)
         {
             float totalLength = 0f;
-            float lastSectorLength = 0f;
+            float lastSectorPosition = 0f;
             for(int i = 0; i <= index; ++i)
             {
                 Sdb.SectorInfo eachSector = StageManager.Instance.CurrentStageInfo.SectorInfos[i];
+                lastSectorPosition = totalLength;
                 totalLength += eachSector.Length * 12.8f;
-                lastSectorLength = eachSector.Length;
             }
 
-            return new Vector2(totalLength - lastSectorLength, totalLength);
+            return new Vector2(lastSectorPosition + 1f, totalLength - 1f);
         }
 
         private void CreateZombies()
@@ -117,6 +117,8 @@ namespace Logic
 
             float randomBoxDropRate = (float)CurrentSectorInfo.BoxDropPercent * 0.01f;
             bool isDropBox = Random.value < randomBoxDropRate;
+
+            CreateRandomBox(actor.transform.position.x, string.Empty);
 
             if(ActorContainer.Instance.GetZombieCount() == 0)
             {

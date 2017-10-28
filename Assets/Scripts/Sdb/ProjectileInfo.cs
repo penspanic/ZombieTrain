@@ -7,6 +7,7 @@ namespace Sdb
     public class ProjectileInfo : SdbIdentifiableBase
     {
         public Constants.LaunchType Type;
-        public string ProjectileId;
+        public float MoveTime;
+        public int Damage;
     }
 }

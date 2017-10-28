@@ -114,8 +114,15 @@ namespace Logic
 
         private void PushByHit(Vector2 direction)
         {
-            direction += Vector2.up;
-            RigidBody.velocity = direction * 5f;
+            float power = 5f;
+            if(direction.x < 0 )
+            {
+                RigidBody.velocity = new Vector2(-1f, 1f) * power;
+            }
+            else
+            {
+                RigidBody.velocity = new Vector2(1f, 1f) * power;
+            }
         }
 
         public void Heal(int healAmount)

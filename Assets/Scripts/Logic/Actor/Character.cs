@@ -58,7 +58,7 @@ namespace Logic
 
             this.Weapon = weapon;
             this.Weapon.transform.SetParent(_weaponParent.transform, false);
-            this._weaponParent.transform.localPosition = Vector2.zero;
+            this.Weapon.transform.localPosition = Vector2.zero;
         }
 
         private void ThrowWeapon(WeaponBase weapon)

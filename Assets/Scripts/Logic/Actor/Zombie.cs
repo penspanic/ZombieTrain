@@ -22,6 +22,10 @@ namespace Logic
             {
                 return;
             }
+            if(character.transform.position.DistanceWith(this.transform.position) > SpecificSdb<Sdb.GeneralInfo>.Get().ZombieDetactionRange)
+            {
+                return;
+            }
 
             Vector2 diffPosition = character.transform.position - this.transform.position;
             diffPosition.y = 0;
