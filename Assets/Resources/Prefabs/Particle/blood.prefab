@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198027795926021404}
   - component: {fileID: 199063247798122670}
   m_Layer: 0
-  m_Name: Blood
+  m_Name: blood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

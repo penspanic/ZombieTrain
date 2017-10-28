@@ -27,6 +27,7 @@ namespace Logic
             CreateCharacter();
 
             _currentStageInfo = SdbInstance<Sdb.StageInfo>.Get(DynamicInfo.DynamicInfo.SelectedStageId);
+            SectorManager.Instance.CreateSectors();
             SectorManager.Instance.ChangeSector(0);
         }
 

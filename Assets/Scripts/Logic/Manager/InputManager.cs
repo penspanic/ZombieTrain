@@ -63,7 +63,7 @@ namespace Logic
 
         private void ProcessAttack()
         {
-
+            _character.AttackController.OnAttackCommand();
         }
 
         private void ProcessJump()

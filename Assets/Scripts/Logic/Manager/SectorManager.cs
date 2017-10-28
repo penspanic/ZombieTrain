@@ -27,12 +27,32 @@ namespace Logic
         }
 
         [SerializeField]
+        private GameObject _trainParent;
+        [SerializeField]
+        private GameObject _trainPrefab;
+        [SerializeField]
         private GameObject _randomBoxPrefab;
 
         protected override void Awake()
         {
             base.Awake();
             ActorContainer.Instance.OnActorRemoved += OnActorRemoved;
+        }
+
+        public void CreateSectors()
+        {
+            int totalTrainNumber = 0;
+            for(int i = 0; i < StageManager.Instance.CurrentStageInfo.SectorInfos.Length; ++i)
+            {
+                for(int j = 0; j < StageManager.Instance.CurrentStageInfo.SectorInfos[i].Length; ++j)
+                {
+                    GameObject newTrain = Instantiate(_trainPrefab);
+                    newTrain.transform.SetParent(_trainParent.transform, false);
+                    newTrain.transform.localPosition = new Vector2(totalTrainNumber * 12.8f + 6.4f, 0f);
+
+                    ++totalTrainNumber;
+                }
+            }
         }
 
         public void ChangeSector(int sectorIndex)
@@ -89,6 +109,7 @@ namespace Logic
             boxInstance.ItemId = itemId;
 
             Vector2 createPosition = new Vector2(xPosition, Random.Range(0.5f, 1f));
+            createPosition.y = -1.8f;
             boxInstance.transform.position = createPosition;
 
             //boxInstance.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10f);

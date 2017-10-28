@@ -5,19 +5,22 @@ namespace Logic
 {
     public class WeaponBase : MonoBehaviour
     {
-        public Sdb.WeaponInfo WeaponInfo
+        public Sdb.WeaponInfo WeaponInfo { get; private set; }
+        public Character Owner { get; private set; }
+
+        protected virtual void Awake()
         {
-            get
-            {
-                return _weaponInfo;
-            }
+
         }
 
-        private Sdb.WeaponInfo _weaponInfo;
-
-        public void Init(Sdb.WeaponInfo weaponInfo)
+        public virtual void Init(Sdb.WeaponInfo weaponInfo)
         {
-            this._weaponInfo = weaponInfo;
+            this.WeaponInfo = weaponInfo;
+        }
+
+        public void SetOwner(Character owner)
+        {
+            this.Owner = owner;
         }
     }
 }

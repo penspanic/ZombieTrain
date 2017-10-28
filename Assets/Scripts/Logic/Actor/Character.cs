@@ -7,13 +7,19 @@ namespace Logic
     public class Character : ActorBase
     {
         public Sdb.CharacterInfo CharacterInfo { get; private set; }
+
+        public AttackController AttackController { get; private set; }
         public WeaponBase Weapon { get; private set; }
+
+
+        public event System.Action OnWeaponChanged;
 
         private GameObject _weaponParent;
 
         protected override void Awake()
         {
             base.Awake();
+            AttackController = new AttackController(this);
             _weaponParent = transform.FindRecursive("WeaponParent").gameObject;
         }
 
@@ -27,6 +33,8 @@ namespace Logic
         public void SetWeapon(WeaponBase weapon)
         {
             this.Weapon = weapon;
+            this.Weapon.SetOwner(this);
+            OnWeaponChanged?.Invoke();
         }
 
         protected override void FixedUpdate()

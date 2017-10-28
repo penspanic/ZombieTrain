@@ -38,6 +38,7 @@ namespace Logic
         public virtual void Init(Sdb.ActorInfo actorInfo)
         {
             this.ActorInfo = actorInfo;
+            this.Hp = actorInfo.MaxHp;
 
             ActorContainer.Instance.Add(this);
         }
@@ -69,6 +70,17 @@ namespace Logic
             if(other.gameObject.CompareTag("Ground") == true)
             {
                 OnGroundEnter?.Invoke();
+            }
+        }
+
+        public void GiveDamage(int damage)
+        {
+            this.Hp -= damage;
+            if(this.Hp <= 0)
+            {
+                this.Hp = 0;
+                ActorContainer.Instance.Remove(this);
+                Destroy(this.gameObject);
             }
         }
 

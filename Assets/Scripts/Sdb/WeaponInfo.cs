@@ -13,7 +13,8 @@ namespace Sdb
     [CreateAssetMenu(fileName = "MeeleWeaponInfo", menuName = "MeeleWeaponInfo")]
     public class MeeleWeaponInfo : SdbIdentifiableBase
     {
-        public Constants.WeaponType Type;
+        public float StartActivateTime;
+        public float ActivateTime;
         public int Damage;
         public float PushPower;
     }
