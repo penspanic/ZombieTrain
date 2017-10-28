@@ -425,7 +425,7 @@ SpriteRenderer:
   m_Size: {x: 0.02, y: 0.02}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &536945617
 Transform:
@@ -498,7 +498,7 @@ SpriteRenderer:
   m_Size: {x: 0.02, y: 0.02}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!4 &868615333
 Transform:
@@ -1124,6 +1124,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1733386505}
+--- !u!1001 &1839573968
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4400384769601624, guid: ecc36d39ca5f245d784705dba030cbdf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400384769601624, guid: ecc36d39ca5f245d784705dba030cbdf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400384769601624, guid: ecc36d39ca5f245d784705dba030cbdf, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400384769601624, guid: ecc36d39ca5f245d784705dba030cbdf, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400384769601624, guid: ecc36d39ca5f245d784705dba030cbdf, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400384769601624, guid: ecc36d39ca5f245d784705dba030cbdf, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400384769601624, guid: ecc36d39ca5f245d784705dba030cbdf, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4400384769601624, guid: ecc36d39ca5f245d784705dba030cbdf, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ecc36d39ca5f245d784705dba030cbdf, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1872868528
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,7 +1287,7 @@ SpriteRenderer:
   m_Size: {x: 0.02, y: 0.02}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
 --- !u!61 &2061778235
 BoxCollider2D:
