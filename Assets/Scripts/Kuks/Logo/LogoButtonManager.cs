@@ -8,6 +8,7 @@ public class LogoButtonManager : MonoBehaviour {
 
 	[SerializeField]GameObject _creditObject;
 	[SerializeField]Image _buttonImage;
+	[SerializeField]Text _buttonText;
 	[SerializeField]float _switchDelay = 0.3f;
 	[SerializeField]Sprite _switchSprite2;
 	[SerializeField]Sprite _switchSprite3;
@@ -41,6 +42,7 @@ public class LogoButtonManager : MonoBehaviour {
 	IEnumerator ButtonClick_Co()
 	{
 		_startClicked = true;
+		_buttonText.text = "";
 		yield return new WaitForSeconds(_switchDelay);
 		_buttonImage.sprite = _switchSprite2;
 		AppSound.instance.SE_button.Play();
