@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 3tier_chicken
   m_EditorClassIdentifier: 
   Id: chicken
-  StartActivateTime: 0
-  ActivateTime: 0
+  StartActivateTime: 0.2
+  ActivateTime: 0.6
   Damage: 1
   PushPower: 1

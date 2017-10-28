@@ -13,6 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: Basic_Weapon
   StartActivateTime: 0
-  ActivateTime: 2
-  Damage: 2
-  PushPower: 2
+  ActivateTime: 0
+  Damage: 1
+  PushPower: 3

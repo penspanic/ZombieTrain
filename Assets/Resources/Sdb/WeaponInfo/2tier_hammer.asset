@@ -14,4 +14,4 @@ MonoBehaviour:
   Id: hammer
   Type: 1
   Grade: 2
-  CoolTime: 2
+  CoolTime: 1

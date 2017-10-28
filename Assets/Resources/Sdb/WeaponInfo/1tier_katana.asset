@@ -14,4 +14,4 @@ MonoBehaviour:
   Id: katana
   Type: 1
   Grade: 3
-  CoolTime: 1
+  CoolTime: 0.5

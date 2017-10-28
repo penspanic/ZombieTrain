@@ -8,11 +8,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63160809111497e4abfe0fa78ae5b9ff, type: 3}
-  m_Name: 3tier_sardine
+  m_Script: {fileID: 11500000, guid: a63a29c8b928b974190df9eac215ec38, type: 3}
+  m_Name: 3tier_chicken
   m_EditorClassIdentifier: 
-  Id: sardine
-  StartActivateTime: 0.4
-  ActivateTime: 0.4
-  Damage: 1
-  PushPower: 1
+  Id: chicken
+  Type: 1
+  Grade: 1
+  CoolTime: 0
