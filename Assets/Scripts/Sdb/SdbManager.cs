@@ -24,6 +24,11 @@ public static class SdbInstance<T> where T : SdbIdentifiableBase
 
         return sdbDatas[id];
     }
+
+    public static List<T> GetAll()
+    {
+        return new List<T>(sdbDatas.Values);
+    }
 }
 
 public static class SpecificSdb<T> where T : UnityEngine.ScriptableObject

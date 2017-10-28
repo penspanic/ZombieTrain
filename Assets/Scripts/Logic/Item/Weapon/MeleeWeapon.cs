@@ -50,7 +50,7 @@ namespace Logic
             }
 
             _hittedSerials.Add(zombie.Serial);
-            zombie.GiveDamage(MeleeWeaponInfo.Damage);
+            zombie.GiveDamage(Owner, MeleeWeaponInfo.Damage);
 
             switch(WeaponInfo.Grade)
             {
