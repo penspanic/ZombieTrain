@@ -31,7 +31,7 @@ namespace Logic
         protected virtual void Awake()
         {
             RigidBody = GetComponentInChildren<Rigidbody2D>();
-            Animator = GetComponent<Animator>();
+            Animator = GetComponentInChildren<Animator>();
             MoveController = new MoveController(this);
         }
 

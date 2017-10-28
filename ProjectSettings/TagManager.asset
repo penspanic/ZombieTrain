@@ -17,10 +17,10 @@ TagManager:
   - 
   - Item
   - Ground
+  - Character
+  - Zombie
+  - Enemy
   - particle
-  - 
-  - 
-  - 
   - 
   - 
   - 

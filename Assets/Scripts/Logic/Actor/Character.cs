@@ -24,5 +24,17 @@ namespace Logic
         {
             this.Weapon = weapon;
         }
+
+        protected override void FixedUpdate()
+        {
+            base.FixedUpdate();
+            UpdateAnimation();
+        }
+
+        private void UpdateAnimation()
+        {
+            Animator.SetFloat("Velocity", Mathf.Abs(RigidBody.velocity.x));
+            Animator.SetBool("IsGrounded", MoveController.IsGrounded);
+        }
     }
 }
