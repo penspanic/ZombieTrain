@@ -9,6 +9,9 @@ namespace Logic
         {
             base.Use(owner);
             owner.Heal(SpecificSdb<Sdb.GeneralInfo>.Get().HpItemHealValue);
+            // 이펙트 출력
+
+            Destroy(this.gameObject);
         }
     }
 }

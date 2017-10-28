@@ -12,6 +12,8 @@ namespace Logic
         private Button _attackButton;
         [SerializeField]
         private Button _jumpButton;
+        [SerializeField]
+        private Button _pickButton;
 
         private Character _character;
 
@@ -20,6 +22,7 @@ namespace Logic
             base.Awake();
             _attackButton.onClick.AddListener(ProcessAttack);
             _jumpButton.onClick.AddListener(ProcessJump);
+            _pickButton.onClick.AddListener(ProcessPick);
         }
 
         public void SetCharacter(Character character)
@@ -34,6 +37,8 @@ namespace Logic
                 return;
             }
 
+            SetPickButtonInteractive();
+
             Vector2 dirVec = new Vector2(joystick.HorizontalAxis.Value, joystick.VerticalAxis.Value);
             _character.MoveController.ProcessJoystick(dirVec);
 
@@ -45,6 +50,15 @@ namespace Logic
             {
                 ProcessJump();
             }
+            if(Input.GetKeyDown(KeyCode.Alpha3) == true)
+            {
+                ProcessPick();
+            }
+        }
+
+        private void SetPickButtonInteractive()
+        {
+            _pickButton.interactable = RandomBoxContainer.Instance.IsInteractiveBoxExist();
         }
 
         private void ProcessAttack()
@@ -55,6 +69,11 @@ namespace Logic
         private void ProcessJump()
         {
             _character.MoveController.ProcessJump();
+        }
+
+        private void ProcessPick()
+        {
+            RandomBoxContainer.Instance.Use();
         }
     }
 }

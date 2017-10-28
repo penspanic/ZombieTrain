@@ -23,6 +23,7 @@ namespace Logic
 
         private void LoadStage()
         {
+            Application.targetFrameRate = 60;
             CreateCharacter();
 
             _currentStageInfo = SdbInstance<Sdb.StageInfo>.Get(DynamicInfo.DynamicInfo.SelectedStageId);
@@ -34,6 +35,7 @@ namespace Logic
             Character character = ActorFactory.Instance.Create(SdbInstance<Sdb.ActorInfo>.Get("Character1")) as Character;
             character.transform.position = new Vector3(-5f, -1.37f, 0f);
 
+            SectorManager.Instance.CreateRandomBox(character.transform.position.x + 1f, "Basic_Weapon");
             InputManager.Instance.SetCharacter(character);
             CameraManager.Instance.SetCharacter(character);
         }

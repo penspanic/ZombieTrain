@@ -83,13 +83,15 @@ namespace Logic
             bool isDropBox = Random.value < randomBoxDropRate;
         }
 
-        private void CreateRandomBox(float xPosition)
+        public void CreateRandomBox(float xPosition, string itemId)
         {
-            GameObject boxInstance = Instantiate<GameObject>(_randomBoxPrefab);
+            RandomBox boxInstance = Instantiate<GameObject>(_randomBoxPrefab).GetComponent<RandomBox>();
+            boxInstance.ItemId = itemId;
+
             Vector2 createPosition = new Vector2(xPosition, Random.Range(0.5f, 1f));
             boxInstance.transform.position = createPosition;
 
-            boxInstance.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10f);
+            //boxInstance.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10f);
         }
     }
 }

@@ -8,9 +8,13 @@ namespace Logic
     {
         public Sdb.CharacterInfo CharacterInfo { get; private set; }
         public WeaponBase Weapon { get; private set; }
+
+        private GameObject _weaponParent;
+
         protected override void Awake()
         {
             base.Awake();
+            _weaponParent = transform.FindRecursive("WeaponParent").gameObject;
         }
 
         public override void Init(ActorInfo actorInfo)
@@ -35,6 +39,23 @@ namespace Logic
         {
             Animator.SetFloat("Velocity", Mathf.Abs(RigidBody.velocity.x));
             Animator.SetBool("IsGrounded", MoveController.IsGrounded);
+        }
+
+        public void EquipWeapon(WeaponBase weapon)
+        {
+            if(this.Weapon != null)
+            {
+                ThrowWeapon(this.Weapon);
+            }
+
+            this.Weapon = weapon;
+            this.Weapon.transform.SetParent(_weaponParent.transform, false);
+            this._weaponParent.transform.localPosition = Vector2.zero;
+        }
+
+        private void ThrowWeapon(WeaponBase weapon)
+        {
+            Destroy(weapon);
         }
     }
 }
