@@ -49,6 +49,9 @@ TagManager:
   - name: Item
     uniqueID: 2267945885
     locked: 0
+  - name: Particle
+    uniqueID: 2240178419
+    locked: 0
   - name: UI
     uniqueID: 1900103267
     locked: 0

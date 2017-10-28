@@ -21,8 +21,9 @@ GameObject:
   - component: {fileID: 4781543480524768}
   - component: {fileID: 198674359612028212}
   - component: {fileID: 199465131851120914}
+  - component: {fileID: 114170390259768418}
   m_Layer: 0
-  m_Name: Item0
+  m_Name: Item_Low
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,12 +36,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1414686036373306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.8422854, y: -1.902557, z: -0.044259645}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114170390259768418
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1414686036373306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88dfb5d9b474df841b43fa96ecebce3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destroyTime: 5
 --- !u!198 &198674359612028212
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3391,8 +3404,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2054788877
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0

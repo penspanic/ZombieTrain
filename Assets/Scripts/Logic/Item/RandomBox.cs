@@ -43,6 +43,7 @@ namespace Logic
         {
             RandomBoxContainer.Instance.Remove(this);
             ItemBase createdItem = ItemFactory.Instance.Create(ItemId);
+            createdItem.transform.position = this.transform.position;
             createdItem.Use(ActorContainer.Instance.LocalCharacter);
 
             Destroy(this.gameObject);

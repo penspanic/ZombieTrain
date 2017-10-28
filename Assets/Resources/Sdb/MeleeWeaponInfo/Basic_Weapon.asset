@@ -10,9 +10,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
   m_Name: Basic_Weapon
-  m_EditorClassIdentifier: Assembly-CSharp:Sdb:MeeleWeaponInfo
+  m_EditorClassIdentifier: Assembly-CSharp:Sdb:MeleeWeaponInfo
   Id: Basic_Weapon
-  StartActivateTime: 0.8
+  StartActivateTime: 0.5
   ActivateTime: 0.5
-  Damage: 1
+  Damage: 2
   PushPower: 2

@@ -10,6 +10,14 @@ namespace Constants
         RangeWeapon,
     }
 
+    public enum WeaponGrade
+    {
+        Undefined = 0,
+        Low,
+        Normal,
+        High,
+    }
+
     public enum LaunchType
     {
         Undefined = 0,

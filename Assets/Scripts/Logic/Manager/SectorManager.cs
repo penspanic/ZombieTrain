@@ -31,6 +31,8 @@ namespace Logic
         [SerializeField]
         private GameObject _trainPrefab;
         [SerializeField]
+        private GameObject _transitionZonePrefab;
+        [SerializeField]
         private GameObject _randomBoxPrefab;
 
         protected override void Awake()
@@ -41,17 +43,22 @@ namespace Logic
 
         public void CreateSectors()
         {
-            int totalTrainNumber = 0;
+            float createPositionX = 6.4f;
             for(int i = 0; i < StageManager.Instance.CurrentStageInfo.SectorInfos.Length; ++i)
             {
                 for(int j = 0; j < StageManager.Instance.CurrentStageInfo.SectorInfos[i].Length; ++j)
                 {
                     GameObject newTrain = Instantiate(_trainPrefab);
                     newTrain.transform.SetParent(_trainParent.transform, false);
-                    newTrain.transform.localPosition = new Vector2(totalTrainNumber * 12.8f + 6.4f, 0f);
+                    newTrain.transform.localPosition = new Vector2(createPositionX, 0f);
 
-                    ++totalTrainNumber;
+                    createPositionX += 12.8f;
                 }
+
+                GameObject newTransitionZone = Instantiate(_transitionZonePrefab);
+                newTransitionZone.transform.SetParent(_trainParent.transform, false);
+                newTransitionZone.transform.localPosition = new Vector2(createPositionX - 4.8f, 0f);
+                createPositionX += 3.2f;
             }
         }
 

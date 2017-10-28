@@ -13,4 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: Basic_Weapon
   Type: 1
-  CoolTime: 4
+  Grade: 1
+  CoolTime: 2
