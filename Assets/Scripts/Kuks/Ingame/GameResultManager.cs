@@ -19,19 +19,9 @@ public class GameResultManager : MonoBehaviour {
 	}
 	// Use this for initialization
 	void Start () {
-		FadeFilter.instance.FadeIn(Color.black,_fadeTime);
 		_gameOverText.text = "";
 	}
-	/// <summary>
-	/// Update is called every frame, if the MonoBehaviour is enabled.
-	/// </summary>
-	void Update()
-	{
-		if (Input.GetMouseButton(0))
-		{
-			GameClear();
-		}
-	}
+
 	public void GameOver()
 	{
 		StartCoroutine(GAMEEND_Co("GAME OVER"));
@@ -42,7 +32,6 @@ public class GameResultManager : MonoBehaviour {
 	}
 	IEnumerator GAMEEND_Co(string result)
 	{
-		FadeFilter.instance.FadeOut(Color.black,_fadeTime);
 		yield return new WaitForSeconds(_fadeTime);
 		_gameOverText.text = result;
 		yield return new WaitForSeconds(_waitingTime);

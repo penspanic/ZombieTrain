@@ -112,6 +112,7 @@ namespace Logic
         {
             if(actor.ActorInfo.Type != Constants.ActorType.Zombie)
             {
+                GameResultManager.instance.GameOver();
                 return;
             }
 

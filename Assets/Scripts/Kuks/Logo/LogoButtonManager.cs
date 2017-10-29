@@ -23,10 +23,6 @@ public class LogoButtonManager : MonoBehaviour {
 
 	}
 
-	// Use this for initialization
-	void Start () {
-		FadeFilter.instance.FadeIn(Color.black,_fadeTime);
-	}
 	public void ButtonClick()
 	{
 		if(!_startClicked)
@@ -51,8 +47,6 @@ public class LogoButtonManager : MonoBehaviour {
 		_buttonImage.sprite = _switchSprite3;
 		AppSound.instance.SE_button.Play();
 		yield return new WaitForSeconds(_switchDelay);
-		FadeFilter.instance.FadeOut(Color.black,_fadeTime);
-		yield return new WaitForSeconds(_fadeTime);
 		SceneManager.LoadScene(1);
 	}
 	
