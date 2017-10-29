@@ -15,3 +15,4 @@ MonoBehaviour:
   Type: 1
   Grade: 1
   CoolTime: 1
+  SoundEffectName: SE_knife

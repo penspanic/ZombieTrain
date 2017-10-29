@@ -15,3 +15,4 @@ MonoBehaviour:
   Type: 1
   Grade: 2
   CoolTime: 1.5
+  SoundEffectName: SE_fryingpan
