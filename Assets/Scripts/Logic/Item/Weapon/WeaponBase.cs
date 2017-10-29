@@ -8,6 +8,8 @@ namespace Logic
         public Sdb.WeaponInfo WeaponInfo { get; private set; }
         public Character Owner { get; private set; }
 
+        public int Durability { get; protected set; }
+
         protected virtual void Awake()
         {
 
@@ -16,6 +18,7 @@ namespace Logic
         public virtual void Init(Sdb.WeaponInfo weaponInfo)
         {
             this.WeaponInfo = weaponInfo;
+            this.Durability = weaponInfo.DurabilityCount;
         }
 
         public void SetOwner(Character owner)

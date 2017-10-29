@@ -49,7 +49,7 @@ namespace Logic
         {
             base.OnCollisionEnter2D(other);
 
-            if(other.gameObject.layer == LayerMask.NameToLayer("Character"))
+            if(other.gameObject.layer == LayerMask.NameToLayer("Character") && this.IsInvincible == false)
             {
                 other.gameObject.GetComponent<Character>().GiveDamage(this, 1);
             }
@@ -57,7 +57,7 @@ namespace Logic
 
         protected void OnCollisionStay2D(Collision2D other)
         {
-            if(other.gameObject.layer == LayerMask.NameToLayer("Character"))
+            if(other.gameObject.layer == LayerMask.NameToLayer("Character") && this.IsInvincible == false)
             {
                 other.gameObject.GetComponent<Character>().GiveDamage(this, 1);
             }

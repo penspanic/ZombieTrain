@@ -13,6 +13,7 @@ namespace Logic
 
 
         public event System.Action OnWeaponChanged;
+        public event System.Action OnWeaponDurabilityChanged;
 
         private GameObject _weaponParent;
 
@@ -28,13 +29,6 @@ namespace Logic
             base.Init(actorInfo);
 
             CharacterInfo = SdbInstance<Sdb.CharacterInfo>.Get(actorInfo.Id);
-        }
-
-        public void SetWeapon(WeaponBase weapon)
-        {
-            this.Weapon = weapon;
-            this.Weapon.SetOwner(this);
-            OnWeaponChanged?.Invoke();
         }
 
         protected override void FixedUpdate()
@@ -59,11 +53,18 @@ namespace Logic
             this.Weapon = weapon;
             this.Weapon.transform.SetParent(_weaponParent.transform, false);
             this.Weapon.transform.localPosition = Vector2.zero;
+
+            OnWeaponChanged?.Invoke();
         }
 
         private void ThrowWeapon(WeaponBase weapon)
         {
-            Destroy(weapon);
+            Destroy(weapon.gameObject);
+        }
+
+        public void WeaponDurabilityChnaged()
+        {
+            OnWeaponDurabilityChanged?.Invoke();
         }
     }
 }

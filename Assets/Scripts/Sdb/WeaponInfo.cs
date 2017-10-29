@@ -8,6 +8,7 @@ namespace Sdb
     {
         public Constants.WeaponType Type;
         public Constants.WeaponGrade Grade;
+        public int DurabilityCount;
         public float CoolTime;
         public string SoundEffectName;
     }

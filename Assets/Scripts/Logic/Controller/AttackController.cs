@@ -43,6 +43,11 @@ namespace Logic
                 (_owner.Weapon as MeleeWeapon).Activate();
             }
 
+            if(_owner.Weapon.Durability == 0)
+            {
+                _owner.EquipWeapon(null);
+            }
+
             _coolTimeCoroutine = _owner.StartCoroutine(CoolTimeProcess());
         }
 
@@ -52,7 +57,6 @@ namespace Logic
             {
                 case Constants.WeaponType.Melee:
                     _owner.Animator.SetTrigger("Meele");
-                    break;
                     break;
                 case Constants.WeaponType.RangeWeapon:
                     Sdb.LauncherInfo launcherInfo = SdbInstance<Sdb.LauncherInfo>.Get(_owner.Weapon.WeaponInfo.Id);

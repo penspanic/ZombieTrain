@@ -24,6 +24,8 @@ namespace Logic
 
         public void Activate()
         {
+            --Durability;
+            Owner.WeaponDurabilityChnaged();
             _hittedSerials.Clear();
             StartCoroutine(ActivateProcess());
             PlaySoundEffect();
@@ -31,7 +33,7 @@ namespace Logic
 
         private void PlaySoundEffect()
         {
-            if(WeaponInfo.SoundEffectName != string.Empty)
+            if(string.IsNullOrEmpty(WeaponInfo.SoundEffectName) == false)
             {
                 AppSound.instance.SE_PLAY(WeaponInfo.SoundEffectName);
             }
