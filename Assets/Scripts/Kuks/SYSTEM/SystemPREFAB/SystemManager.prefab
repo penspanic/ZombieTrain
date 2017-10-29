@@ -43,6 +43,7 @@ MonoBehaviour:
   LoadGameObjectList_Awake:
   - {fileID: 174058, guid: d519493e0713849e79f8455f1bf6fd0f, type: 2}
   - {fileID: 107018, guid: f248a9275e9e646288f6c5a492781c8d, type: 2}
+  - {fileID: 152604, guid: 8614fee52df9541d7b561506cec63a74, type: 2}
   LoadGameObjectList_Start: []
   LoadGameObjectList_Update: []
   LoadGameObjectList_FixedUpdate: []

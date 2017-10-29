@@ -23,7 +23,7 @@ TagManager:
   - Enemy
   - Weapon
   - particle
-  - 
+  - Fade
   - 
   - 
   - 
@@ -58,4 +58,7 @@ TagManager:
     locked: 0
   - name: zombieparticle
     uniqueID: 132672179
+    locked: 0
+  - name: Fade
+    uniqueID: 2012488257
     locked: 0

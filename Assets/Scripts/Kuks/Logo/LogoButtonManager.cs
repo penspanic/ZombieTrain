@@ -10,6 +10,7 @@ public class LogoButtonManager : MonoBehaviour {
 	[SerializeField]Image _buttonImage;
 	[SerializeField]Text _buttonText;
 	[SerializeField]float _switchDelay = 0.3f;
+	[SerializeField]float _fadeTime = 0.7f;
 	[SerializeField]Sprite _switchSprite2;
 	[SerializeField]Sprite _switchSprite3;
 	bool _startClicked = false;
@@ -24,7 +25,7 @@ public class LogoButtonManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		FadeFilter.instance.FadeIn(Color.black,_fadeTime);
 	}
 	public void ButtonClick()
 	{
@@ -50,6 +51,8 @@ public class LogoButtonManager : MonoBehaviour {
 		_buttonImage.sprite = _switchSprite3;
 		AppSound.instance.SE_button.Play();
 		yield return new WaitForSeconds(_switchDelay);
+		FadeFilter.instance.FadeOut(Color.black,_fadeTime);
+		yield return new WaitForSeconds(_fadeTime);
 		SceneManager.LoadScene(1);
 	}
 	

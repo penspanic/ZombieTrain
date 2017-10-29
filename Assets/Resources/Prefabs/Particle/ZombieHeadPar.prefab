@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198105392902940194}
   - component: {fileID: 199136383811936584}
   m_Layer: 0
-  m_Name: ZombieArmPar
+  m_Name: ZombieHeadPar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35,7 +35,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1834245175790528}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -3.28, y: -2.1, z: -0.032090772}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +101,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -892878160
+  randomSeed: -1124939112
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -149,8 +149,8 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 25
-      minScalar: 20
+      scalar: 18
+      minScalar: 14
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -551,7 +551,7 @@ ParticleSystem:
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 15, z: 0}
+    m_Rotation: {x: 0, y: 13, z: 0}
     m_Scale: {x: 0.92303985, y: 1, z: 1}
     placementMode: 0
     m_Mesh: {fileID: 0}
@@ -3373,7 +3373,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2c98cf906b09b44249e2ba005c0a3d52, type: 2}
+  - {fileID: 2100000, guid: 241d3f36bdab0446d820eec540d9f2a2, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
