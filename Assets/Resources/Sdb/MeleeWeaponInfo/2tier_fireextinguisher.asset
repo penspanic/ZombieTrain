@@ -15,4 +15,4 @@ MonoBehaviour:
   StartActivateTime: 0.5
   ActivateTime: 1
   Damage: 2
-  PushPower: 2
+  PushPower: 10
