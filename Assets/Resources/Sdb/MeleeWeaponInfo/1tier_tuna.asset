@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 1tier_tuna
   m_EditorClassIdentifier: 
   Id: tuna
-  StartActivateTime: 0.5
+  StartActivateTime: 0
   ActivateTime: 1
   Damage: 3
   PushPower: 14

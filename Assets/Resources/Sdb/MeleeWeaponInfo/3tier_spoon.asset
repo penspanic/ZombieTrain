@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 3tier_spoon
   m_EditorClassIdentifier: 
   Id: spoon
-  StartActivateTime: 0.2
+  StartActivateTime: 0
   ActivateTime: 0.2
   Damage: 1
   PushPower: 6

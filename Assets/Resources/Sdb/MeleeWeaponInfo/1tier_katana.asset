@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 1tier_katana
   m_EditorClassIdentifier: 
   Id: katana
-  StartActivateTime: 0.4
+  StartActivateTime: 0
   ActivateTime: 0.7
   Damage: 3
   PushPower: 8

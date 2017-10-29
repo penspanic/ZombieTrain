@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 2tier_shovel
   m_EditorClassIdentifier: 
   Id: shovel
-  StartActivateTime: 0.5
+  StartActivateTime: 0
   ActivateTime: 1
   Damage: 2
   PushPower: 10

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 1tier_chainsaw
   m_EditorClassIdentifier: 
   Id: chainsaw
-  StartActivateTime: 0.7
+  StartActivateTime: 0
   ActivateTime: 1
   Damage: 3
   PushPower: 10

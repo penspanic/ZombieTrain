@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 3tier_sardine
   m_EditorClassIdentifier: 
   Id: sardine
-  StartActivateTime: 0.4
+  StartActivateTime: 0
   ActivateTime: 0.4
   Damage: 1
   PushPower: 8

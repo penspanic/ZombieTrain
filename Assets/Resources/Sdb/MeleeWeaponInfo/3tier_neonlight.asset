@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 3tier_neonlight
   m_EditorClassIdentifier: 
   Id: neonlight
-  StartActivateTime: 0.4
+  StartActivateTime: 0
   ActivateTime: 1
   Damage: 1
   PushPower: 10

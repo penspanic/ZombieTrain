@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 2tier_hammer
   m_EditorClassIdentifier: 
   Id: hammer
-  StartActivateTime: 0.4
+  StartActivateTime: 0
   ActivateTime: 0.8
   Damage: 2
   PushPower: 8

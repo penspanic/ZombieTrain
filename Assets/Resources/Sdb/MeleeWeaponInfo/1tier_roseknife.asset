@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 1tier_roseknife
   m_EditorClassIdentifier: 
   Id: roseknife
-  StartActivateTime: 0.2
+  StartActivateTime: 0
   ActivateTime: 0.5
   Damage: 3
   PushPower: 6

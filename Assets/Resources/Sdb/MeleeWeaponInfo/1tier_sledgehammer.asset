@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: 1tier_sledgehammer
   m_EditorClassIdentifier: 
   Id: sledgehammer
-  StartActivateTime: 0.5
+  StartActivateTime: 0
   ActivateTime: 1.2
   Damage: 3
   PushPower: 14
