@@ -9,6 +9,8 @@ namespace UI
         [SerializeField]
         private GameObject[] _heartObjects;
         [SerializeField]
+        private GameObject[] _bloodImages;
+        [SerializeField]
         private Text _durabilityText;
 
         private void Start()
@@ -32,7 +34,16 @@ namespace UI
             {
                 _heartObjects[i].SetActive(true);
             }
-            Debug.Log("OnCharacterHpChanged");
+
+            for(int i = 0; i < _bloodImages.Length; ++i)
+            {
+                _bloodImages[i].SetActive(false);
+            }
+
+            for(int i = 0; i < 5 - hp; ++i)
+            {
+                _bloodImages[i].SetActive(true);
+            }
         }
 
         private void OnCharacterWeaponChanged()

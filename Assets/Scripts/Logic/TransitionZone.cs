@@ -28,6 +28,11 @@ namespace Logic
                 return;
             }
 
+            if(ActorContainer.Instance.LocalCharacter == null)
+            {
+                return;
+            }
+
             if(this.transform.position.DistanceWith(ActorContainer.Instance.LocalCharacter.transform.position) < 5f)
             {
                 _isDoorOpened = true;
