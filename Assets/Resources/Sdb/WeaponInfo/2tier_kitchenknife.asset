@@ -14,5 +14,6 @@ MonoBehaviour:
   Id: kitchenknife
   Type: 1
   Grade: 2
+  DurabilityCount: 3
   CoolTime: 1
   SoundEffectName: SE_knife

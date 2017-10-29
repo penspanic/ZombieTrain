@@ -14,5 +14,6 @@ MonoBehaviour:
   Id: tuna
   Type: 1
   Grade: 3
+  DurabilityCount: 10
   CoolTime: 2
   SoundEffectName: SE_fish

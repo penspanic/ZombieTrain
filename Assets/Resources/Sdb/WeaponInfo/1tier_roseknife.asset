@@ -14,5 +14,6 @@ MonoBehaviour:
   Id: roseknife
   Type: 1
   Grade: 3
+  DurabilityCount: 3
   CoolTime: 0.5
   SoundEffectName: SE_knife

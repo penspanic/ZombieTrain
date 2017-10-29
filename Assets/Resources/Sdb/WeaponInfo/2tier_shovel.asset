@@ -14,5 +14,6 @@ MonoBehaviour:
   Id: shovel
   Type: 1
   Grade: 2
+  DurabilityCount: 8
   CoolTime: 1.5
   SoundEffectName: SE_fryingpan

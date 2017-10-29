@@ -14,5 +14,6 @@ MonoBehaviour:
   Id: spoon
   Type: 1
   Grade: 1
+  DurabilityCount: 5
   CoolTime: 0.5
   SoundEffectName: SE_knife

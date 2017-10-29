@@ -14,5 +14,6 @@ MonoBehaviour:
   Id: chicken
   Type: 1
   Grade: 1
+  DurabilityCount: 4
   CoolTime: 0.5
   SoundEffectName: SE_fish

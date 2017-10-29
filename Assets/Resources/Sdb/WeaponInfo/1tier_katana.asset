@@ -14,5 +14,6 @@ MonoBehaviour:
   Id: katana
   Type: 1
   Grade: 3
+  DurabilityCount: 8
   CoolTime: 0.5
   SoundEffectName: SE_katana

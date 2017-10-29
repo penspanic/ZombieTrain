@@ -14,5 +14,6 @@ MonoBehaviour:
   Id: fireextinguisher
   Type: 1
   Grade: 2
+  DurabilityCount: 5
   CoolTime: 2
   SoundEffectName: SE_fireextinguisher

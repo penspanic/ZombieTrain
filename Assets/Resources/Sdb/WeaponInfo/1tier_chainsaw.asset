@@ -14,5 +14,6 @@ MonoBehaviour:
   Id: chainsaw
   Type: 1
   Grade: 3
+  DurabilityCount: 12
   CoolTime: 1.5
   SoundEffectName: SE_knife
