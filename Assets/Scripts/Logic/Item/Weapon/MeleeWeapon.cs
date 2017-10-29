@@ -45,6 +45,11 @@ namespace Logic
             _hitCollider.enabled = true;
             yield return new WaitForSeconds(MeleeWeaponInfo.ActivateTime);
             _hitCollider.enabled = false;
+
+            if(Durability == 0)
+            {
+                Owner.EquipWeapon(null);
+            }
         }
 
         protected virtual void OnTriggerEnter2D(Collider2D other)

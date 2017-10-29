@@ -51,10 +51,16 @@ namespace Logic
             }
 
             this.Weapon = weapon;
+            OnWeaponChanged?.Invoke();
+            OnWeaponDurabilityChanged();
+            if(weapon == null)
+            {
+                return;
+            }
+
             this.Weapon.transform.SetParent(_weaponParent.transform, false);
             this.Weapon.transform.localPosition = Vector2.zero;
 
-            OnWeaponChanged?.Invoke();
         }
 
         private void ThrowWeapon(WeaponBase weapon)

@@ -43,12 +43,10 @@ namespace Logic
                 (_owner.Weapon as MeleeWeapon).Activate();
             }
 
-            if(_owner.Weapon.Durability == 0)
+            if(_owner.Weapon != null)
             {
-                _owner.EquipWeapon(null);
+                _coolTimeCoroutine = _owner.StartCoroutine(CoolTimeProcess());
             }
-
-            _coolTimeCoroutine = _owner.StartCoroutine(CoolTimeProcess());
         }
 
         private void PlayAttackAnimation()
