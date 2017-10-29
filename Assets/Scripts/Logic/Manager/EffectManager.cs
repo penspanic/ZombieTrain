@@ -13,6 +13,10 @@ namespace Logic
         Item_Normal,
         Item_High,
         Explosion,
+        Zombie_Arm,
+        Zombie_Body,
+        Zombie_Head,
+        Zombie_Leg,
         End_Of_Effect,
     }
 

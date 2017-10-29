@@ -98,7 +98,12 @@ namespace Logic
             OnDamaged?.Invoke();
 
             Vector2 attackDirection = this.transform.position - attacker.transform.position;
-            PushByHit(attackDirection.normalized);
+            float pushPower = 10f;
+            if(attacker is Character && (attacker as Character).Weapon is MeleeWeapon)
+            {
+                pushPower = ((attacker as Character).Weapon as MeleeWeapon).MeleeWeaponInfo.PushPower;
+            }
+            PushByHit(pushPower, attackDirection.normalized);
 
             StartCoroutine(InvincibleProcess());
             return true;
@@ -113,10 +118,9 @@ namespace Logic
             OnInvincibleEnd?.Invoke();
         }
 
-        private void PushByHit(Vector2 direction)
+        private void PushByHit(float power, Vector2 direction)
         {
-            float power = 5f;
-            if(direction.x < 0 )
+            if(direction.x < 0)
             {
                 RigidBody.velocity = new Vector2(-1f, 1f) * power;
             }

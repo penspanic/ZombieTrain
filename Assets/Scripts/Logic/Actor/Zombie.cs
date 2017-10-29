@@ -66,6 +66,8 @@ namespace Logic
         private void OnZombieDamaged()
         {
             AppSound.instance.SE_zombie_hit.Play();
+            EffectType randomEffect = (EffectType)Random.Range((int)EffectType.Zombie_Arm, (int)EffectType.Zombie_Leg + 1);
+            EffectManager.Instance.Show(randomEffect, this.transform.position);
         }
 
         private void OnZombieDead()
