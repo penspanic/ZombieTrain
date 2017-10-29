@@ -15,25 +15,25 @@ MonoBehaviour:
   SectorInfos:
   - Length: 2
     ZombieCount: 2
-    BoxDropPercent: 50
-  - Length: 5
-    ZombieCount: 10
-    BoxDropPercent: 30
-  - Length: 5
+    BoxDropPercent: 40
+  - Length: 3
+    ZombieCount: 20
+    BoxDropPercent: 10
+  - Length: 3
     ZombieCount: 30
-    BoxDropPercent: 20
-  - Length: 5
-    ZombieCount: 30
-    BoxDropPercent: 20
-  - Length: 5
+    BoxDropPercent: 5
+  - Length: 3
+    ZombieCount: 40
+    BoxDropPercent: 5
+  - Length: 4
     ZombieCount: 50
-    BoxDropPercent: 20
-  - Length: 7
-    ZombieCount: 30
-    BoxDropPercent: 20
+    BoxDropPercent: 5
+  - Length: 4
+    ZombieCount: 60
+    BoxDropPercent: 5
+  - Length: 4
+    ZombieCount: 70
+    BoxDropPercent: 5
   - Length: 5
-    ZombieCount: 50
-    BoxDropPercent: 20
-  - Length: 7
-    ZombieCount: 50
-    BoxDropPercent: 20
+    ZombieCount: 80
+    BoxDropPercent: 5
