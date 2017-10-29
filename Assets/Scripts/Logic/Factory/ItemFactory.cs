@@ -43,6 +43,7 @@ namespace Logic
                 infoByGrade[weaponInfos[i].Grade].Add(weaponInfos[i]);
             }
 
+            infoByGrade[Constants.WeaponGrade.Low].Remove(SdbInstance<Sdb.WeaponInfo>.Get("Basic_Weapon"));
             float random = Random.value;
             Constants.WeaponGrade selectedGrade = Constants.WeaponGrade.Undefined;
             if(random > 0.8f)

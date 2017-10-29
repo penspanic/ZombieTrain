@@ -17,6 +17,7 @@ namespace Logic
         Zombie_Body,
         Zombie_Head,
         Zombie_Leg,
+        Dead,
         End_Of_Effect,
     }
 

@@ -91,6 +91,7 @@ namespace Logic
             {
                 this.Hp = 0;
                 ActorContainer.Instance.Remove(this);
+                EffectManager.Instance.Show(EffectType.Dead, this.transform.position);
                 Destroy(this.gameObject);
             }
 

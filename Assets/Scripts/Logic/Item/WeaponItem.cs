@@ -17,17 +17,20 @@ namespace Logic
             WeaponBase weapon = Instantiate(prefab).GetComponent<WeaponBase>();
             Sdb.WeaponInfo weaponInfo = SdbInstance<Sdb.WeaponInfo>.Get(WeaponId);
 
-            switch(weaponInfo.Grade)
+            if(WeaponId != "Basic_Weapon")
             {
-                case Constants.WeaponGrade.Low:
-                    EffectManager.Instance.Show(EffectType.Item_Low, this.gameObject.transform.position);
-                    break;
-                case Constants.WeaponGrade.Normal:
-                    EffectManager.Instance.Show(EffectType.Item_Normal, this.gameObject.transform.position);
-                    break;
-                case Constants.WeaponGrade.High:
-                    EffectManager.Instance.Show(EffectType.Item_High, this.gameObject.transform.position);
-                    break;
+                switch(weaponInfo.Grade)
+                {
+                    case Constants.WeaponGrade.Low:
+                        EffectManager.Instance.Show(EffectType.Item_Low, this.gameObject.transform.position);
+                        break;
+                    case Constants.WeaponGrade.Normal:
+                        EffectManager.Instance.Show(EffectType.Item_Normal, this.gameObject.transform.position);
+                        break;
+                    case Constants.WeaponGrade.High:
+                        EffectManager.Instance.Show(EffectType.Item_High, this.gameObject.transform.position);
+                        break;
+                }
             }
             weapon.Init(weaponInfo);
             weapon.SetOwner(owner);
