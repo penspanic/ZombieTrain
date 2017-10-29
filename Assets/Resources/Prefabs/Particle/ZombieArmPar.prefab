@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 198105392902940194}
   - component: {fileID: 199136383811936584}
   m_Layer: 0
-  m_Name: ZombieParticle
+  m_Name: ZombieArmPar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3373,7 +3373,7 @@ ParticleSystemRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 79c206dfbf6494f7386ef12e2da7b8d6, type: 2}
+  - {fileID: 2100000, guid: 2c98cf906b09b44249e2ba005c0a3d52, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -3392,7 +3392,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 132672179
-  m_SortingLayer: 3
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 3
