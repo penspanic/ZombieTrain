@@ -37,6 +37,7 @@ namespace Logic
             {
                 _isDoorOpened = true;
                 _door.GetComponent<Animator>().SetTrigger("Open");
+                AppSound.instance.SE_dooropen.Play();
                 _lockCollider.enabled = false;
 
             }

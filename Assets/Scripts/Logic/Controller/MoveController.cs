@@ -40,6 +40,8 @@ namespace Logic
 
             IsGrounded = false;
             _actor.RigidBody.velocity += Vector2.up * (_actor as Character).CharacterInfo.JumpPower;
+
+            AppSound.instance.SE_jump.Play();
         }
 
         private void OnGroundEnter()

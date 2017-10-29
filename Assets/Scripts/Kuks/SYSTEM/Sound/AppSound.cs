@@ -140,7 +140,7 @@ public class AppSound : MonoBehaviour {
 
 			// 배경음 재생
 			
-			if (sceneName == "LogoScene") {
+			if (sceneName == "MainScene") {
 				fm.Stop ("BGM");
 				fm.FadeOutVolumeGroup("BGM",BGM_TITLE,0.0f,1.0f,false);
 				fm.FadeInVolume(BGM_TITLE,SoundBGMVolume,1.0f,true);

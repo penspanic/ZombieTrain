@@ -41,6 +41,8 @@ namespace Logic
 
         public void Use()
         {
+            AppSound.instance.SE_itembox_open.Play();
+
             RandomBoxContainer.Instance.Remove(this);
             ItemBase createdItem = ItemFactory.Instance.Create(ItemId);
             createdItem.transform.position = this.transform.position;

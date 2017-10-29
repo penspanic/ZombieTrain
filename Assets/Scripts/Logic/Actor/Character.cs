@@ -62,7 +62,7 @@ namespace Logic
 
             this.Weapon.transform.SetParent(_weaponParent.transform, false);
             this.Weapon.transform.localPosition = Vector2.zero;
-
+            AppSound.instance.SE_itembox_open.Play();
         }
 
         private void ThrowWeapon(WeaponBase weapon)
