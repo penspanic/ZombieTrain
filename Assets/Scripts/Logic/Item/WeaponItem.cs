@@ -9,8 +9,12 @@ namespace Logic
         public override void Use(Character owner)
         {
             base.Use(owner);
-
-            WeaponBase weapon = Instantiate(Resources.Load<GameObject>("Prefabs/Item/Weapons/" + WeaponId)).GetComponent<WeaponBase>();
+            GameObject prefab = Resources.Load<GameObject>("Prefabs/Item/Weapons/" + WeaponId);
+            if(prefab == null)
+            {
+                throw new UnityException(WeaponId + " Weapoon prefab not found!");
+            }
+            WeaponBase weapon = Instantiate(prefab).GetComponent<WeaponBase>();
             Sdb.WeaponInfo weaponInfo = SdbInstance<Sdb.WeaponInfo>.Get(WeaponId);
 
             switch(weaponInfo.Grade)
