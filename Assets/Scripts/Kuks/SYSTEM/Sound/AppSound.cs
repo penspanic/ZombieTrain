@@ -108,6 +108,12 @@ public class AppSound : MonoBehaviour {
 	}
 	public void SE_PLAY(string SEname)
 	{
+        if(audiosources.ContainsKey(SEname) == false)
+        {
+            Debug.LogError("AppSound " + SEname + " not loaded!");
+            return;
+        }
+
 		AudioSource playse = audiosources[SEname];
 		playse.Play();
 	}

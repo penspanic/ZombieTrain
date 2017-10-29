@@ -9,5 +9,6 @@ namespace Sdb
         public Constants.WeaponType Type;
         public Constants.WeaponGrade Grade;
         public float CoolTime;
+        public string SoundEffectName;
     }
 }

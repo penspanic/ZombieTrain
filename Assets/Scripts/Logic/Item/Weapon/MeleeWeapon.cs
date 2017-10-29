@@ -26,6 +26,15 @@ namespace Logic
         {
             _hittedSerials.Clear();
             StartCoroutine(ActivateProcess());
+            PlaySoundEffect();
+        }
+
+        private void PlaySoundEffect()
+        {
+            if(WeaponInfo.SoundEffectName != string.Empty)
+            {
+                AppSound.instance.SE_PLAY(WeaponInfo.SoundEffectName);
+            }
         }
 
         private IEnumerator ActivateProcess()
