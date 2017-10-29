@@ -14,4 +14,4 @@ MonoBehaviour:
   Id: bottle
   Type: 1
   Grade: 1
-  CoolTime: 0
+  CoolTime: 0.5
