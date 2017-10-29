@@ -12,7 +12,7 @@ namespace Logic
             GameObject prefab = Resources.Load<GameObject>("Prefabs/Item/Weapons/" + WeaponId);
             if(prefab == null)
             {
-                throw new UnityException(WeaponId + " Weapoon prefab not found!");
+                throw new UnityException(WeaponId + " Weapon prefab not found!");
             }
             WeaponBase weapon = Instantiate(prefab).GetComponent<WeaponBase>();
             Sdb.WeaponInfo weaponInfo = SdbInstance<Sdb.WeaponInfo>.Get(WeaponId);

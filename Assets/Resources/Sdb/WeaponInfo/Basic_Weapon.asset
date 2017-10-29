@@ -14,5 +14,6 @@ MonoBehaviour:
   Id: Basic_Weapon
   Type: 1
   Grade: 1
+  DurabilityCount: 3
   CoolTime: 0.5
   SoundEffectName: SE_bathammer

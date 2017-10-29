@@ -55,6 +55,8 @@ namespace Logic
             OnWeaponDurabilityChanged();
             if(weapon == null)
             {
+                ItemBase createdItem = ItemFactory.Instance.Create("Basic_Weapon");
+                createdItem.Use(ActorContainer.Instance.LocalCharacter);
                 return;
             }
 
