@@ -28,6 +28,7 @@ namespace Logic
         public event System.Action OnGroundEnter;
         public event System.Action<int> OnHpChanged;
         public event System.Action OnDamaged;
+        public event System.Action OnDead;
 
         public event System.Action OnInvincibleStart;
         public event System.Action OnInvincibleEnd;

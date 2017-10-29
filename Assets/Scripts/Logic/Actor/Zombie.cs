@@ -9,6 +9,8 @@ namespace Logic
         protected override void Awake()
         {
             base.Awake();
+            base.OnDamaged += OnZombieDamaged;
+            base.OnDead += OnZombieDead;
         }
 
         private void Update()
@@ -59,6 +61,16 @@ namespace Logic
             {
                 other.gameObject.GetComponent<Character>().GiveDamage(this, 1);
             }
+        }
+
+        private void OnZombieDamaged()
+        {
+            AppSound.instance.SE_zombie_hit.Play();
+        }
+
+        private void OnZombieDead()
+        {
+            AppSound.instance.SE_zombie_die.Play();
         }
     }
 }
