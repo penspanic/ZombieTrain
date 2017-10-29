@@ -52,7 +52,7 @@ namespace Logic
 
             this.Weapon = weapon;
             OnWeaponChanged?.Invoke();
-            OnWeaponDurabilityChanged();
+            OnWeaponDurabilityChanged?.Invoke();
             if(weapon == null)
             {
                 ItemBase createdItem = ItemFactory.Instance.Create("Basic_Weapon");

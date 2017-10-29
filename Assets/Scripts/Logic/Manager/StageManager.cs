@@ -35,8 +35,8 @@ namespace Logic
         {
             Character character = ActorFactory.Instance.Create(SdbInstance<Sdb.ActorInfo>.Get("Character1")) as Character;
             character.transform.position = new Vector3(-5f, -1.37f, 0f);
-
-            SectorManager.Instance.CreateRandomBox(character.transform.position.x + 1f, "Basic_Weapon");
+            character.EquipWeapon(null);
+            //SectorManager.Instance.CreateRandomBox(character.transform.position.x + 1f, "Basic_Weapon");
             InputManager.Instance.SetCharacter(character);
             CameraManager.Instance.SetCharacter(character);
         }

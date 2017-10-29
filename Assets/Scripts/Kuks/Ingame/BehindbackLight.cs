@@ -28,12 +28,10 @@ public class BehindbackLight : MonoBehaviour {
 		{
 			float randomDelayTime = Random.Range(_timeMinDelay,_timeMaxDelay);
 			yield return new WaitForSeconds(randomDelayTime);
-			Debug.Log("yellow");
 			yield return new WaitForSeconds(_lightDelay);
-			_backGround.DOColor(new Vector4(255,255,0,1),_lightDelay);
+            _backGround.DOColor(new Color(254f / 255f, 255f / 255f, 195f / 255f, 1f), _lightDelay);
 			yield return new WaitForSeconds(_durationDelay);
-			_backGround.DOColor(new Vector4(0,0,0,1),_lightDelay);
-			Debug.Log("black");
+            _backGround.DOColor(new Vector4(0, 0, 0, 1), _lightDelay);
 			yield return new WaitForSeconds(_lightDelay);
 		}
 	}
