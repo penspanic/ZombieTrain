@@ -40,5 +40,14 @@ namespace Logic
             InputManager.Instance.SetCharacter(character);
             CameraManager.Instance.SetCharacter(character);
         }
+
+        private void OnApplicationQuit()
+        {
+            if(DynamicInfo.DynamicInfo.CurrentScore > DynamicInfo.DynamicInfo.HighScore)
+            {
+                PlayerPrefs.SetInt("HighScore", DynamicInfo.DynamicInfo.CurrentScore);
+            }
+            PlayerPrefs.Save();
+        }
     }
 }

@@ -224,8 +224,8 @@ PlayerSettings:
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: D:/One Drive/OneDrive/Unity/KeyStores/ZombieTrain.keystore
+  AndroidKeyaliasName: zombietrain_key
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
   AndroidEnableTango: 0

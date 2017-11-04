@@ -24,11 +24,11 @@ public class GameResultManager : MonoBehaviour {
 
 	public void GameOver()
 	{
-		StartCoroutine(GAMEEND_Co("GAME OVER"));
+        StartCoroutine(GAMEEND_Co("GAME OVER"));
 	}
 	public void GameClear()
 	{
-		StartCoroutine(GAMEEND_Co("GAME CLEAR"));
+        StartCoroutine(GAMEEND_Co("GAME CLEAR"));
 	}
 	IEnumerator GAMEEND_Co(string result)
 	{

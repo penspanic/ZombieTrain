@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -35,6 +36,8 @@ namespace Logic
         private GameObject _transitionZonePrefab;
         [SerializeField]
         private GameObject _randomBoxPrefab;
+        [SerializeField]
+        private Text _scoreText;
 
         private List<TransitionZone> transitionZones = new List<TransitionZone>();
 
@@ -112,9 +115,16 @@ namespace Logic
         {
             if(actor.ActorInfo.Type != Constants.ActorType.Zombie)
             {
+                if (DynamicInfo.DynamicInfo.CurrentScore > DynamicInfo.DynamicInfo.HighScore)
+                {
+                    PlayerPrefs.SetInt("HighScore", DynamicInfo.DynamicInfo.CurrentScore);
+                }
                 GameResultManager.instance.GameOver();
                 return;
             }
+
+            ++DynamicInfo.DynamicInfo.CurrentScore;
+            _scoreText.text = "KILLS:" + DynamicInfo.DynamicInfo.CurrentScore;
 
             float randomBoxDropRate = (float)CurrentSectorInfo.BoxDropPercent * 0.01f;
             bool isDropBox = Random.value < randomBoxDropRate;
