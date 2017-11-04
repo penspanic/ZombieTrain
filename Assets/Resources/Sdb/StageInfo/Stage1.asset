@@ -18,58 +18,121 @@ MonoBehaviour:
     BoxDropPercent: 50
   - Length: 3
     ZombieCount: 20
-    BoxDropPercent: 30
+    BoxDropPercent: 20
   - Length: 3
     ZombieCount: 30
-    BoxDropPercent: 20
+    BoxDropPercent: 15
   - Length: 3
     ZombieCount: 40
-    BoxDropPercent: 20
+    BoxDropPercent: 10
   - Length: 4
     ZombieCount: 50
     BoxDropPercent: 20
   - Length: 4
     ZombieCount: 60
-    BoxDropPercent: 20
+    BoxDropPercent: 10
   - Length: 4
     ZombieCount: 70
-    BoxDropPercent: 20
+    BoxDropPercent: 10
   - Length: 5
     ZombieCount: 80
-    BoxDropPercent: 20
+    BoxDropPercent: 10
   - Length: 5
     ZombieCount: 80
-    BoxDropPercent: 20
+    BoxDropPercent: 10
   - Length: 5
     ZombieCount: 100
-    BoxDropPercent: 20
+    BoxDropPercent: 10
   - Length: 5
     ZombieCount: 120
-    BoxDropPercent: 20
+    BoxDropPercent: 10
   - Length: 5
     ZombieCount: 140
-    BoxDropPercent: 20
+    BoxDropPercent: 10
   - Length: 5
     ZombieCount: 160
-    BoxDropPercent: 20
+    BoxDropPercent: 10
   - Length: 5
     ZombieCount: 180
-    BoxDropPercent: 20
+    BoxDropPercent: 10
   - Length: 5
     ZombieCount: 200
-    BoxDropPercent: 20
+    BoxDropPercent: 10
   - Length: 5
     ZombieCount: 200
-    BoxDropPercent: 20
+    BoxDropPercent: 10
   - Length: 5
     ZombieCount: 200
-    BoxDropPercent: 20
+    BoxDropPercent: 10
   - Length: 5
-    ZombieCount: 200
-    BoxDropPercent: 20
+    ZombieCount: 210
+    BoxDropPercent: 10
   - Length: 5
-    ZombieCount: 200
-    BoxDropPercent: 20
+    ZombieCount: 210
+    BoxDropPercent: 10
   - Length: 5
-    ZombieCount: 200
-    BoxDropPercent: 20
+    ZombieCount: 210
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 210
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 210
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 210
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
+  - Length: 5
+    ZombieCount: 220
+    BoxDropPercent: 10
