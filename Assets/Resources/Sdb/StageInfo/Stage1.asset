@@ -23,15 +23,18 @@ MonoBehaviour:
     ZombieCount: 30
     BoxDropPercent: 15
   - Length: 3
-    ZombieCount: 40
+    ZombieCount: 30
     BoxDropPercent: 10
   - Length: 4
     ZombieCount: 50
     BoxDropPercent: 20
   - Length: 4
-    ZombieCount: 60
+    ZombieCount: 50
     BoxDropPercent: 10
   - Length: 4
+    ZombieCount: 70
+    BoxDropPercent: 10
+  - Length: 5
     ZombieCount: 70
     BoxDropPercent: 10
   - Length: 5
@@ -44,16 +47,13 @@ MonoBehaviour:
     ZombieCount: 100
     BoxDropPercent: 10
   - Length: 5
-    ZombieCount: 120
+    ZombieCount: 200
     BoxDropPercent: 10
   - Length: 5
-    ZombieCount: 140
+    ZombieCount: 150
     BoxDropPercent: 10
   - Length: 5
-    ZombieCount: 160
-    BoxDropPercent: 10
-  - Length: 5
-    ZombieCount: 180
+    ZombieCount: 150
     BoxDropPercent: 10
   - Length: 5
     ZombieCount: 200
